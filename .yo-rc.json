@@ -1,0 +1,40 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.api.cv",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.1.0",
+    "applicationType": "monolith",
+    "baseName": "my_cv_api",
+    "packageName": "com.api.cv",
+    "packageFolder": "com/api/cv",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "YzNiNzhjNzdiM2I0MjU5YzM1ZjgzMzg0YWRkZTI0ZjEyZjMxOThmMDc4MGM3ZTFkMzI3ODUzZTQwZGEwYmQxYmY5MmIyZWFhNzU2ODAyMjQ3ZjNlZmJiY2I2ODg3ZDBkYTZmMmM2YTQ4N2M2YTNhZGYxMTE1Yzk4ZjhmNDcxOWI=",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "materia",
+    "clientThemeVariant": "dark",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "pt-pt"]
+  }
+}
