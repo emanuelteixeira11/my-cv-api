@@ -1,0 +1,26 @@
+{
+  "myCvApiApp": {
+    "location": {
+      "home": {
+        "title": "Locations",
+        "createLabel": "Criar um(a) novo(a) Location",
+        "createOrEditLabel": "Criar ou editar um(a) Location",
+        "notFound": "No Location found"
+      },
+      "created": "A new Location is created with identifier {{ param }}",
+      "updated": "A Location is updated with identifier {{ param }}",
+      "deleted": "A Location is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Location {{ id }}?"
+      },
+      "detail": {
+        "title": "Location"
+      },
+      "country": "Country",
+      "city": "City",
+      "fromDate": "From Date",
+      "toDate": "To Date",
+      "person": "Person"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "myCvApiApp": {
+    "project": {
+      "home": {
+        "title": "Projects",
+        "createLabel": "Criar um(a) novo(a) Project",
+        "createOrEditLabel": "Criar ou editar um(a) Project",
+        "notFound": "No Project found"
+      },
+      "created": "A new Project is created with identifier {{ param }}",
+      "updated": "A Project is updated with identifier {{ param }}",
+      "deleted": "A Project is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Project {{ id }}?"
+      },
+      "detail": {
+        "title": "Project"
+      },
+      "shortDescription": "Short Description",
+      "longDescription": "Long Description",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "technology": "Technology",
+      "profissionalExperience": "Profissional Experience"
+    }
+  }
+}

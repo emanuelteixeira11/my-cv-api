@@ -14,6 +14,42 @@
     <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110152_added_entity_TokenMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110153_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110154_added_entity_ProfessionalExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110155_added_entity_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110156_added_entity_Technology.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110157_added_entity_AcademicExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110158_added_entity_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110159_added_entity_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110200_added_entity_Language.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110201_added_entity_Reward.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130603_added_entity_TokenMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130604_added_entity_Person.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130605_added_entity_ProfessionalExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130606_added_entity_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130607_added_entity_Technology.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130608_added_entity_AcademicExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130609_added_entity_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130610_added_entity_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130611_added_entity_Language.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130612_added_entity_Reward.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190620110152_added_entity_constraints_TokenMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110154_added_entity_constraints_ProfessionalExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110155_added_entity_constraints_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110157_added_entity_constraints_AcademicExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110158_added_entity_constraints_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110159_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110200_added_entity_constraints_Language.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620110201_added_entity_constraints_Reward.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130603_added_entity_constraints_TokenMap.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130605_added_entity_constraints_ProfessionalExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130606_added_entity_constraints_Project.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130608_added_entity_constraints_AcademicExperience.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130609_added_entity_constraints_Contact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130610_added_entity_constraints_Location.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130611_added_entity_constraints_Language.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190620130612_added_entity_constraints_Reward.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

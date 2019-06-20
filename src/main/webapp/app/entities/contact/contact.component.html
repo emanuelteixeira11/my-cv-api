@@ -1,0 +1,67 @@
+<div>
+    <h2 id="page-heading">
+        <span jhiTranslate="myCvApiApp.contact.home.title">Contacts</span>
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-contact" [routerLink]="['/contact/new']">
+            <fa-icon [icon]="'plus'"></fa-icon>
+            <span  jhiTranslate="myCvApiApp.contact.home.createLabel">
+            Create new Contact
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <br/>
+    <div class="alert alert-warning" *ngIf="contacts?.length === 0">
+        <span jhiTranslate="myCvApiApp.contact.home.notFound">No contacts found</span>
+    </div>
+    <div class="table-responsive" *ngIf="contacts?.length > 0">
+        <table class="table table-striped">
+            <thead>
+            <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="reset.bind(this)">
+            <th jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="type"><span jhiTranslate="myCvApiApp.contact.type">Type</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="value"><span jhiTranslate="myCvApiApp.contact.value">Value</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="isActive"><span jhiTranslate="myCvApiApp.contact.isActive">Is Active</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th jhiSortBy="person.id"><span jhiTranslate="myCvApiApp.contact.person">Person</span> <fa-icon [icon]="'sort'"></fa-icon></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody infinite-scroll (scrolled)="loadPage(page + 1)" [infiniteScrollDisabled]="page >= links['last']" [infiniteScrollDistance]="0">
+            <tr *ngFor="let contact of contacts ;trackBy: trackId">
+                <td><a [routerLink]="['/contact', contact.id, 'view' ]">{{contact.id}}</a></td>
+                <td jhiTranslate="{{'myCvApiApp.ContactType.' + contact.type}}">{{contact.type}}</td>
+                <td>{{contact.value}}</td>
+                <td>{{contact.isActive}}</td>
+                <td>
+                    <div *ngIf="contact.person">
+                        <a [routerLink]="['../person', contact.person?.id, 'view' ]" >{{contact.person?.id}} - {{contact.person?.firstName}} {{contact.person?.lastName}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group">
+                        <button type="submit"
+                                [routerLink]="['/contact', contact.id, 'view' ]"
+                                class="btn btn-info btn-sm">
+                            <fa-icon [icon]="'eye'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/contact', contact.id, 'edit']"
+                                class="btn btn-primary btn-sm">
+                            <fa-icon [icon]="'pencil-alt'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', 'contact', { outlets: { popup: contact.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <fa-icon [icon]="'times'"></fa-icon>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

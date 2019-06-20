@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="location">
+            <h2><span jhiTranslate="myCvApiApp.location.detail.title">Location</span> {{location.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myCvApiApp.location.country">Country</span></dt>
+                <dd>
+                    <span>{{location.country}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.location.city">City</span></dt>
+                <dd>
+                    <span>{{location.city}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.location.fromDate">From Date</span></dt>
+                <dd>
+                    <span>{{location.fromDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.location.toDate">To Date</span></dt>
+                <dd>
+                    <span>{{location.toDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.location.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="location.person">
+                        <a [routerLink]="['/person', location.person?.id, 'view']">{{location.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/location', location.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

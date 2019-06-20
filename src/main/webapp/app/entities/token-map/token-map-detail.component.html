@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tokenMap">
+            <h2><span jhiTranslate="myCvApiApp.tokenMap.detail.title">Token Map</span> {{tokenMap.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myCvApiApp.tokenMap.token">Token</span></dt>
+                <dd>
+                    <span>{{tokenMap.token}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.tokenMap.entityName">Entity Name</span></dt>
+                <dd>
+                    <span>{{tokenMap.entityName}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.tokenMap.validTo">Valid To</span></dt>
+                <dd>
+                    <span>{{tokenMap.validTo}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.tokenMap.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="tokenMap.person">
+                        <a [routerLink]="['/person', tokenMap.person?.id, 'view']">{{tokenMap.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/token-map', tokenMap.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

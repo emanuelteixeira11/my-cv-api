@@ -1,0 +1,26 @@
+{
+  "myCvApiApp": {
+    "reward": {
+      "home": {
+        "title": "Rewards",
+        "createLabel": "Criar um(a) novo(a) Reward",
+        "createOrEditLabel": "Criar ou editar um(a) Reward",
+        "notFound": "No Reward found"
+      },
+      "created": "A new Reward is created with identifier {{ param }}",
+      "updated": "A Reward is updated with identifier {{ param }}",
+      "deleted": "A Reward is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Reward {{ id }}?"
+      },
+      "detail": {
+        "title": "Reward"
+      },
+      "title": "Title",
+      "date": "Date",
+      "issuerEntity": "Issuer Entity",
+      "shortDescription": "Short Description",
+      "person": "Person"
+    }
+  }
+}

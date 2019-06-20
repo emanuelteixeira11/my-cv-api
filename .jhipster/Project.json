@@ -1,0 +1,50 @@
+{
+    "name": "Project",
+    "fields": [
+        {
+            "fieldName": "shortDescription",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "longDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "startDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "endDate",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "technology",
+            "otherEntityRelationshipName": "project",
+            "relationshipName": "technology",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "professionalExperience",
+            "otherEntityRelationshipName": "project",
+            "relationshipName": "profissionalExperience",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190620130606",
+    "entityTableName": "project",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

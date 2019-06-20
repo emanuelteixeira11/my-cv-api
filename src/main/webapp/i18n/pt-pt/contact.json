@@ -1,0 +1,25 @@
+{
+  "myCvApiApp": {
+    "contact": {
+      "home": {
+        "title": "Contacts",
+        "createLabel": "Criar um(a) novo(a) Contact",
+        "createOrEditLabel": "Criar ou editar um(a) Contact",
+        "notFound": "No Contact found"
+      },
+      "created": "A new Contact is created with identifier {{ param }}",
+      "updated": "A Contact is updated with identifier {{ param }}",
+      "deleted": "A Contact is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Contact {{ id }}?"
+      },
+      "detail": {
+        "title": "Contact"
+      },
+      "type": "Type",
+      "value": "Value",
+      "isActive": "Is Active",
+      "person": "Person"
+    }
+  }
+}

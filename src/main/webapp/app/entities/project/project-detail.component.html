@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="project">
+            <h2><span jhiTranslate="myCvApiApp.project.detail.title">Project</span> {{project.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myCvApiApp.project.shortDescription">Short Description</span></dt>
+                <dd>
+                    <span>{{project.shortDescription}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.project.longDescription">Long Description</span></dt>
+                <dd>
+                    <span>{{project.longDescription}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.project.startDate">Start Date</span></dt>
+                <dd>
+                    <span>{{project.startDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.project.endDate">End Date</span></dt>
+                <dd>
+                    <span>{{project.endDate}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.project.technology">Technology</span></dt>
+                <dd>
+                    <span *ngFor="let technology of project.technologies; let last = last">
+                        <a [routerLink]="['/technology', technology?.id, 'view' ]">{{technology.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.project.profissionalExperience">Profissional Experience</span></dt>
+                <dd>
+                    <div *ngIf="project.profissionalExperience">
+                        <a [routerLink]="['/professional-experience', project.profissionalExperience?.id, 'view']">{{project.profissionalExperience?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/project', project.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+{
+  "myCvApiApp": {
+    "tokenMap": {
+      "home": {
+        "title": "Token Maps",
+        "createLabel": "Create a new Token Map",
+        "createOrEditLabel": "Create or edit a Token Map",
+        "notFound": "No Token Map found"
+      },
+      "created": "A new Token Map is created with identifier {{ param }}",
+      "updated": "A Token Map is updated with identifier {{ param }}",
+      "deleted": "A Token Map is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Token Map {{ id }}?"
+      },
+      "detail": {
+        "title": "Token Map"
+      },
+      "token": "Token",
+      "entityName": "Entity Name",
+      "validTo": "Valid To",
+      "person": "Person"
+    }
+  }
+}

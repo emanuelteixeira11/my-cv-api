@@ -1,0 +1,98 @@
+entity TokenMap {
+	token String required unique,
+    entityName String required,
+    validTo LocalDate required
+}
+
+
+entity Person {
+	firstName String required,
+    lastName String required,
+    picturePath String,
+    birthDate LocalDate required,
+    birthTown String,
+    shortDescription String,
+    longDescription String
+}
+
+entity ProfessionalExperience {
+	title String required,
+	company String required,
+    startDate LocalDate required,
+    endDate LocalDate
+}
+
+entity Project {
+	shortDescription String required,
+    longDescription String,
+    startDate LocalDate,
+    endDate LocalDate
+}
+
+entity Technology {
+	techName String required,
+    isFramework Boolean required,
+    experienceRate Double required
+}
+
+entity AcademicExperience {
+	school String required,
+    degree String required,
+    startDate LocalDate required,
+    endDate LocalDate,
+    classification Double
+}
+
+entity Contact {
+	type ContactType required,
+    value String required,
+    isActive Boolean required
+}
+
+entity Location {
+	country String required,
+    city String required,
+    fromDate LocalDate required,
+    toDate LocalDate,
+}
+
+entity Language {
+	language String required,
+    level String required,
+}
+
+enum ContactType {
+	EMAIL,
+    MOBILE,
+    WEBSITE,
+    LINKEDIN
+}
+
+entity Reward{
+	title String required,
+    date LocalDate required,
+    issuerEntity String required,
+    shortDescription String required
+}
+
+relationship OneToMany {
+	Person to ProfessionalExperience{person},
+    Person to AcademicExperience{person},
+    Person to Contact{person},
+    ProfessionalExperience
+    to Project{profissionalExperience},
+    Person to Location{person},
+    Person to Reward{person},
+    Person to TokenMap{person},
+    Person to Language{person}
+}
+
+relationship ManyToMany {
+	Project{technology} to Technology{project}
+}
+
+// Set pagination options
+paginate all with infinite-scroll
+
+// Set service options to all except few
+service all with serviceImpl

@@ -1,0 +1,25 @@
+{
+  "myCvApiApp": {
+    "technology": {
+      "home": {
+        "title": "Technologies",
+        "createLabel": "Create a new Technology",
+        "createOrEditLabel": "Create or edit a Technology",
+        "notFound": "No Technology found"
+      },
+      "created": "A new Technology is created with identifier {{ param }}",
+      "updated": "A Technology is updated with identifier {{ param }}",
+      "deleted": "A Technology is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Technology {{ id }}?"
+      },
+      "detail": {
+        "title": "Technology"
+      },
+      "techName": "Tech Name",
+      "isFramework": "Is Framework",
+      "experienceRate": "Experience Rate",
+      "project": "Project"
+    }
+  }
+}

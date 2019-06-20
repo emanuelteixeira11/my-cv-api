@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="contact">
+            <h2><span jhiTranslate="myCvApiApp.contact.detail.title">Contact</span> {{contact.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myCvApiApp.contact.type">Type</span></dt>
+                <dd>
+                    <span jhiTranslate="{{'myCvApiApp.ContactType.' + contact.type}}">{{contact.type}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.contact.value">Value</span></dt>
+                <dd>
+                    <span>{{contact.value}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.contact.isActive">Is Active</span></dt>
+                <dd>
+                    <span>{{contact.isActive}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.contact.person">Person</span></dt>
+                <dd>
+                    <div *ngIf="contact.person">
+                        <a [routerLink]="['/person', contact.person?.id, 'view']">{{contact.person?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/contact', contact.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

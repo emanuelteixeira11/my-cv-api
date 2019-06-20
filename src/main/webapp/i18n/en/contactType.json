@@ -1,0 +1,11 @@
+{
+  "myCvApiApp": {
+    "ContactType": {
+      "null": "",
+      "EMAIL": "EMAIL",
+      "MOBILE": "MOBILE",
+      "WEBSITE": "WEBSITE",
+      "LINKEDIN": "LINKEDIN"
+    }
+  }
+}

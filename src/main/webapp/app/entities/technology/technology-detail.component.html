@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="technology">
+            <h2><span jhiTranslate="myCvApiApp.technology.detail.title">Technology</span> {{technology.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="myCvApiApp.technology.techName">Tech Name</span></dt>
+                <dd>
+                    <span>{{technology.techName}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.technology.isFramework">Is Framework</span></dt>
+                <dd>
+                    <span>{{technology.isFramework}}</span>
+                </dd>
+                <dt><span jhiTranslate="myCvApiApp.technology.experienceRate">Experience Rate</span></dt>
+                <dd>
+                    <span>{{technology.experienceRate}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/technology', technology.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+{
+  "myCvApiApp": {
+    "academicExperience": {
+      "home": {
+        "title": "Academic Experiences",
+        "createLabel": "Create a new Academic Experience",
+        "createOrEditLabel": "Create or edit a Academic Experience",
+        "notFound": "No Academic Experience found"
+      },
+      "created": "A new Academic Experience is created with identifier {{ param }}",
+      "updated": "A Academic Experience is updated with identifier {{ param }}",
+      "deleted": "A Academic Experience is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Academic Experience {{ id }}?"
+      },
+      "detail": {
+        "title": "Academic Experience"
+      },
+      "school": "School",
+      "degree": "Degree",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "classification": "Classification",
+      "person": "Person"
+    }
+  }
+}

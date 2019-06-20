@@ -43,6 +43,26 @@ public class CacheConfiguration {
             createCache(cm, com.api.cv.domain.User.class.getName());
             createCache(cm, com.api.cv.domain.Authority.class.getName());
             createCache(cm, com.api.cv.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.api.cv.domain.TokenMap.class.getName());
+            createCache(cm, com.api.cv.domain.Person.class.getName());
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".professionalExperiences");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".academicExperiences");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".contacts");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".locations");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".rewards");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".tokenMaps");
+            createCache(cm, com.api.cv.domain.Person.class.getName() + ".languages");
+            createCache(cm, com.api.cv.domain.ProfessionalExperience.class.getName());
+            createCache(cm, com.api.cv.domain.ProfessionalExperience.class.getName() + ".projects");
+            createCache(cm, com.api.cv.domain.Project.class.getName());
+            createCache(cm, com.api.cv.domain.Project.class.getName() + ".technologies");
+            createCache(cm, com.api.cv.domain.Technology.class.getName());
+            createCache(cm, com.api.cv.domain.Technology.class.getName() + ".projects");
+            createCache(cm, com.api.cv.domain.AcademicExperience.class.getName());
+            createCache(cm, com.api.cv.domain.Contact.class.getName());
+            createCache(cm, com.api.cv.domain.Location.class.getName());
+            createCache(cm, com.api.cv.domain.Language.class.getName());
+            createCache(cm, com.api.cv.domain.Reward.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

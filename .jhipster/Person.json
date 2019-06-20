@@ -1,0 +1,95 @@
+{
+    "name": "Person",
+    "fields": [
+        {
+            "fieldName": "firstName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "picturePath",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "birthDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "birthTown",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "shortDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "longDescription",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "professionalExperience",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "professionalExperience"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "academicExperience",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "academicExperience"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "contact",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "contact"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "location",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "location"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "reward",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "reward"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tokenMap",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "tokenMap"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "language",
+            "otherEntityRelationshipName": "person",
+            "relationshipName": "language"
+        }
+    ],
+    "changelogDate": "20190620130604",
+    "entityTableName": "person",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

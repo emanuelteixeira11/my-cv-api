@@ -1,0 +1,71 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-project-heading" jhiTranslate="myCvApiApp.project.home.createOrEditLabel">Create or edit a Project</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myCvApiApp.project.shortDescription" for="field_shortDescription">Short Description</label>
+                    <input type="text" class="form-control" name="shortDescription" id="field_shortDescription"
+                           formControlName="shortDescription"/>
+                    <div *ngIf="editForm.get('shortDescription').invalid && (editForm.get('shortDescription').dirty || editForm.get('shortDescription').touched)">
+                        <small class="form-text text-danger"
+                               *ngIf="editForm.get('shortDescription').errors.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myCvApiApp.project.longDescription" for="field_longDescription">Long Description</label>
+                    <input type="text" class="form-control" name="longDescription" id="field_longDescription"
+                           formControlName="longDescription"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myCvApiApp.project.startDate" for="field_startDate">Start Date</label>
+                    <div class="input-group">
+                        <input id="field_startDate" type="text" class="form-control" name="startDate" ngbDatepicker  #startDateDp="ngbDatepicker" formControlName="startDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="startDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myCvApiApp.project.endDate" for="field_endDate">End Date</label>
+                    <div class="input-group">
+                        <input id="field_endDate" type="text" class="form-control" name="endDate" ngbDatepicker  #endDateDp="ngbDatepicker" formControlName="endDate"/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="endDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label jhiTranslate="myCvApiApp.project.technology" for="field_technologies">Technology</label>
+                    <select class="form-control" id="field_technologies" multiple name="technologies" formControlName="technologies">
+                        <option [ngValue]="getSelected(editForm.get('technologies').value, technologyOption)" *ngFor="let technologyOption of technologies; trackBy: trackTechnologyById">{{technologyOption.id}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="myCvApiApp.project.profissionalExperience" for="field_profissionalExperience">Profissional Experience</label>
+                    <select class="form-control" id="field_profissionalExperience" name="profissionalExperience" formControlName="profissionalExperience">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="professionalExperienceOption.id === editForm.get('profissionalExperience').value?.id ? editForm.get('profissionalExperience').value : professionalExperienceOption" *ngFor="let professionalExperienceOption of professionalexperiences; trackBy: trackProfessionalExperienceById">{{professionalExperienceOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

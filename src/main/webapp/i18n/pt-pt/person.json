@@ -1,0 +1,35 @@
+{
+  "myCvApiApp": {
+    "person": {
+      "home": {
+        "title": "People",
+        "createLabel": "Criar um(a) novo(a) Person",
+        "createOrEditLabel": "Criar ou editar um(a) Person",
+        "notFound": "No Person found"
+      },
+      "created": "A new Person is created with identifier {{ param }}",
+      "updated": "A Person is updated with identifier {{ param }}",
+      "deleted": "A Person is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Tem a certeza que pretende eliminar o(a) Person {{ id }}?"
+      },
+      "detail": {
+        "title": "Person"
+      },
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "picturePath": "Picture Path",
+      "birthDate": "Birth Date",
+      "birthTown": "Birth Town",
+      "shortDescription": "Short Description",
+      "longDescription": "Long Description",
+      "professionalExperience": "Professional Experience",
+      "academicExperience": "Academic Experience",
+      "contact": "Contact",
+      "location": "Location",
+      "reward": "Reward",
+      "tokenMap": "Token Map",
+      "language": "Language"
+    }
+  }
+}
